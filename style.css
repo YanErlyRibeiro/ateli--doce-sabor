@@ -31,6 +31,9 @@
    FAIXA DE PROMOÇÃO SUPERIOR
    ========================================= */
 .faixa-promo {
+    width: 100%; /* Garante que a faixa ocupe a tela toda */
+    box-sizing: border-box; /* A mágica que impede o vazamento lateral */
+    
     background-color: #D25C68; /* A cor de destaque do nosso site */
     color: #FFFFFF;
     text-align: center;
