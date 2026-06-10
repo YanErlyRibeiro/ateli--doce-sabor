@@ -508,6 +508,12 @@ footer p {
         padding: 15px 20px;
     }
 
+    hero h1 {
+        font-size: 2.2rem; /* Diminui um pouco o tamanho da letra */
+        padding: 0 15px; /* Adiciona uma margem interna para o texto não encostar na borda */
+        word-wrap: break-word; /* Garante que palavras gigantes quebrem de linha se precisarem */
+    }
+
     /* Mostra o botão hambúrguer no celular */
     #btn-mobile {
         display: block;
