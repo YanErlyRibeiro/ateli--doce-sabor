@@ -137,6 +137,19 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* 1. Remove o flash azul/cinza padrão do celular ao tocar na tela */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 2. Faz o botão "afundar" quando o dedo pressiona */
+/* Se o seu botão de adicionar no carrinho tiver outro nome, troque o .btn-adicionar */
+.btn-adicionar:active, .btn-carrinho:active {
+    transform: scale(0.95); /* O botão encolhe 5% muito rápido */
+    opacity: 0.8; /* Dá uma leve escurecida */
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
 /* =========================================
    3. SEÇÃO DE DESTAQUE (HERO - PREMIUM)
    ========================================= */
@@ -204,7 +217,7 @@ nav a:hover::after {
     border-radius: var(--borda-arredondada);
     overflow: hidden;
     box-shadow: var(--sombra-card);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; /* Animação mais suave e "elástica" */
+    transition: transform 0.3s ease; /* Animação mais suave e "elástica" */
     display: flex;
     flex-direction: column; /* Para alinhar o botão no final se os textos tiverem tamanhos diferentes */
     border: 1px solid rgba(61, 28, 2, 0.03); /* Borda quase invisível para definir o card */
@@ -212,8 +225,8 @@ nav a:hover::after {
 
 /* Hover do card: sobe levemente e aumenta a sombra */
 .card-produto:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(61, 28, 2, 0.12);
+    transform: translateY(-5px); /* Faz o card pular 5 pixels para cima */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* Cria uma sombra mais forte em volta */
 }
 
 .card-produto img {
