@@ -120,7 +120,7 @@ function enviarParaWhatsApp() {
     textoFinal += `\n*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
     
     // Troque pelo número real da doceria depois
-    const numeroWhatsApp = "5592900000000"; 
+    const numeroWhatsApp = "5592992650030"; 
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoFinal)}`;
     
     window.open(url, '_blank');
