@@ -56,10 +56,14 @@ function adicionarAoCarrinho(nomeProduto, precoProduto) {
 // ==========================================
 function abrirCarrinho() {
     document.getElementById('painel-carrinho').classList.add('aberto');
+    // Trava a rolagem da página de fundo
+    document.body.classList.add('no-scroll'); 
 }
 
 function fecharCarrinho() {
     document.getElementById('painel-carrinho').classList.remove('aberto');
+    // Destrava a rolagem da página de fundo
+    document.body.classList.remove('no-scroll'); 
 }
 
 // ==========================================
