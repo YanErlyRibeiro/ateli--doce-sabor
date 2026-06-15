@@ -1,9 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ateliê Doce Sabor | Bolos Artesanais Premium</title>
     
-    <!-- Importando fontes do Google: Playfair Display (Títulos) e Poppins (Texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,18 +13,15 @@
 </head>
 <body>
 
-    <!-- Faixa de Promoção (Aparece no topo de tudo) -->
     <div id="promo-banner" class="faixa-promo">
         <p>🎉 Especial Dia dos Namorados: Ganhe 15% de desconto usando o cupom <strong>NAMORADOS15</strong> no WhatsApp!</p>
     </div>
     
-    <!-- Cabeçalho e Menu de Navegação -->
     <header>
         <div class="logo">
             <h1>Ateliê Doce Sabor</h1>
         </div>
         
-        <!-- Este é o botão do Menu Hambúrguer -->
         <button id="btn-mobile" aria-label="Abrir Menu">
             <span id="hamburguer"></span>
         </button>
@@ -36,11 +34,9 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
-        <!-- Seção de Destaque (Hero Section) -->
         <section id="inicio" class="hero">
             <h2>Transformando momentos em sabores inesquecíveis</h2>
             <p>Bolos artesanais feitos com ingredientes selecionados e muito carinho.</p>
@@ -49,16 +45,14 @@
 
         <section class="banner-promocional">
             <a href="#contato">
-                <img src="./images/Banner.png" alt="Festival de Fatias Nádia Cakes nesta sexta-feira">
+                <img src="./images/banner-festival-fatias.png" alt="Festival de Fatias Nádia Cakes nesta sexta-feira">
             </a>
         </section>
 
-        <!-- Seção de Produtos (Vitrine) -->
-      <section id="vitrine" class="produtos">
+        <section id="vitrine" class="produtos">
             <h2>Nosso Cardápio</h2>
-            <p>Escolha a categoria perfeita para a sua ocasião e faça a sua </p>
+            <p>Escolha a categoria perfeita para a sua ocasião e faça a sua encomenda</p>
             
-            <!-- Botões de Filtro -->
             <div class="filtros-cardapio" style="margin-bottom: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 <button class="btn-filtro" onclick="filtrar('todos')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--cor-principal); background: var(--cor-principal); color: white; cursor: pointer;">Todos</button>
                 <button class="btn-filtro" onclick="filtrar('vulcao')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--cor-principal); background: transparent; color: var(--cor-principal); cursor: pointer;">Bolos Vulcão</button>
@@ -67,35 +61,35 @@
             
             <div class="categoria-bloco">
                 <h3 class="categoria-titulo">Bolos Vulcão</h3>
-                <div class="grid-produtos">
+                <div id="categoria-vulcao" class="grid-produtos">
                     
                     <div class="card-produto">
-                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop" alt="Bolo Vulcão de Chocolate">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"  alt="Bolo Vulcão de Chocolate" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Vulcão de Chocolate</h3>
                             <p>Massa super fofinha com cobertura generosa de brigadeiro belga.</p>
                             <span class="preco">R$ 65,00</span>
-                           <button class="btn-adicionar" onclick="adicionarAoCarrinho('Bolo Vulcão de Chocolate', 65.00)">Adicionar</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Bolo Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
                     <div class="card-produto">
-                        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=600&auto=format&fit=crop" alt="Bolo de Cenoura com Chocolate">
+                        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=600&auto=format&fit=crop" alt="Bolo de Cenoura com Chocolate" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Vulcão de Cenoura</h3>
                             <p>O clássico bolo de cenoura com uma erupção de brigadeiro tradicional.</p>
                             <span class="preco">R$ 55,00</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Cenoura', 55.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
                     <div class="card-produto">
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop" alt="Bolo de Ninho com Nutella">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop" alt="Bolo de Ninho com Nutella" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Vulcão de Ninho & Nutella</h3>
                             <p>Massa de baunilha coberta com creme de leite Ninho e muita Nutella pura.</p>
                             <span class="preco">R$ 75,00</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Ninho & Nutella', 75.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
@@ -104,28 +98,27 @@
 
             <div class="categoria-bloco">
                 <h3 class="categoria-titulo">Bolos de Festa</h3>
-                <div class="grid-produtos">
+                <div id="categoria-festa" class="grid-produtos">
                     
                     <div class="card-produto">
-                        <img src="./images/BoloAniversario.webp" alt="Bolo de Festa Decorado com Flores">
+                        <img src="./images/BoloAniversario.webp" alt="Bolo de Festa Decorado com Flores" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Clássico de Morango</h3>
                             <p>Massa de baunilha, recheio de ninho com morangos frescos e decoração personalizada.</p>
                             <span class="preco">A partir de R$ 120,00</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Clássico de Morango', 120.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
                     <div class="card-produto">
-                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600&auto=format&fit=crop" alt="Bolo Red Velvet">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600&auto=format&fit=crop" alt="Bolo Red Velvet" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Red Velvet Premium</h3>
                             <p>Massa aveludada com um toque de cacau e um recheio leve de cream cheese frosting.</p>
                             <span class="preco">A partir de R$ 140,00</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Red Velvet Premium', 140.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -134,25 +127,24 @@
                 <div class="grid-produtos">
                     
                     <div class="card-produto">
-                        <img src="./images/BoloCasamento.webp" alt="Bolo de Casamento de Três Andares">
+                        <img src="./images/BoloCasamento.webp" alt="Bolo de Casamento de Três Andares" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Bolo de Casamento Clássico</h3>
                             <p>Andares estruturados, rendas de açúcar e recheios nobres à escolha dos noivos.</p>
                             <span class="preco">Sob Consulta</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Bolo de Casamento Clássico', 0.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
                     <div class="card-produto">
-                        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=600&auto=format&fit=crop" alt="Naked Cake para Eventos">
+                        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=600&auto=format&fit=crop" alt="Naked Cake para Eventos" style="cursor: pointer;" onclick="abrirModal(this.src)">
                         <div class="card-produto-info">
                             <h3>Naked Cake Floral</h3>
                             <p>Bolo rústico e sofisticado decorado com flores naturais e frutas vermelhas da época.</p>
                             <span class="preco">Sob Consulta</span>
-                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Vulcão de Chocolate', 65.00)">Adicionar ao Carrinho</button>
+                            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Naked Cake Floral', 0.00)">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -160,10 +152,8 @@
       
         <section id="sobre" class="sobre-nos">
             <div class="sobre-container">
-                
                 <div class="sobre-imagem">
                     <img src="./images/NadiaCake.jpg" alt="Confeiteira preparando um bolo com carinho">
-                    
                     <div class="selo-experiencia">
                         <span>Desde</span>
                         <strong>2020</strong>
@@ -173,9 +163,7 @@
                 <div class="sobre-texto">
                     <h2>A Nossa História</h2>
                     <h3>De uma paixão familiar diretamente para a sua mesa</h3>
-                    
                     <p>O Ateliê Doce Sabor nasceu na cozinha de casa, com receitas passadas de geração em geração. O que começou como um hobby para adoçar os finais de semana da família, rapidamente se transformou em um propósito de vida.</p>
-                    
                     <p>Acreditamos que cada comemoração merece ser inesquecível. Por isso, não usamos misturas prontas ou conservantes. Cada bolo é assado no dia, artesanalmente, garantindo aquele sabor de infância com o requinte da confeitaria moderna.</p>
                     
                     <div class="sobre-diferenciais">
@@ -193,46 +181,18 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
-    
-    <!-- Rodapé e Contatos -->
     <footer id="contato">
-        <h2>Faça sua </h2>
+        <h2>Faça sua encomenda</h2>
         <p>📍 Rua Belo Horizonte, 123 - Adrianópolis</p>
         <p>📱 WhatsApp: (00) 90000-0000</p>
         <p>&copy; 2026 Ateliê Doce Sabor. Todos os direitos reservados.</p>
     </footer>
 
-
-
-<!-- Script do Menu Mobile e Botões -->
-    <script>
-        const btnMobile = document.getElementById('btn-mobile');
-        const nav = document.getElementById('nav');
-        const linksMenu = document.querySelectorAll('#menu a');
-
-        // Função que abre e fecha o menu
-        function toggleMenu(event) {
-            if (event.type === 'touchstart') event.preventDefault();
-            nav.classList.toggle('active');
-        }
-
-        btnMobile.addEventListener('click', toggleMenu);
-        btnMobile.addEventListener('touchstart', toggleMenu);
-
-        // Faz o menu fechar sozinho quando o usuário clica em um link
-        linksMenu.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-    </script>
-
-<div id="btn-carrinho" onclick="abrirCarrinho()">
+    <div id="btn-carrinho" onclick="abrirCarrinho()">
         🛒 <span id="contador-carrinho">0</span>
     </div>
 
@@ -249,8 +209,15 @@
             <button onclick="enviarParaWhatsApp()" class="btn-whatsapp">Finalizar no WhatsApp</button>
         </div>
     </div>
-    <!-- Chamando o arquivo de JavaScript externo -->
-    <script src="carrinho.js"></script>
+
+    <div id="modal-produto" class="modal">
+        <div class="modal-card">
+            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+            <img id="img-ampliada" src="" alt="Bolo em Detalhes">
+            <button class="btn-adicionar" onclick="fecharModal()">Voltar e Adicionar</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
