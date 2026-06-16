@@ -465,6 +465,29 @@ footer p {
 .categoria-bloco {
     margin-top: 60px; 
     text-align: left; 
+    
+    /* MÁGICA DA ÂNCORA: Cria um espaço invisível no topo 
+       para o cabeçalho fixo não cobrir o título ao rolar */
+    scroll-margin-top: 110px; 
+}
+
+/* Novo estilo para os botões de âncora */
+.btn-ancora {
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    border: 1px solid var(--cor-principal); 
+    background: transparent; 
+    color: var(--cor-principal); 
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+/* Efeito ao passar o mouse */
+.btn-ancora:hover {
+    background: var(--cor-principal);
+    color: var(--cor-branco);
 }
 
 .categoria-titulo {

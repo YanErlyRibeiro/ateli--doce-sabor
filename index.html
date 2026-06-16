@@ -49,23 +49,23 @@
             </a>
         </section>
 
-        <section id="vitrine" class="produtos">
+        section id="vitrine" class="produtos">
             <h2>Nosso Cardápio</h2>
             <p>Escolha a categoria perfeita para a sua ocasião e faça a sua encomenda</p>
             
             <div class="filtros-cardapio" style="margin-bottom: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <button class="btn-filtro" onclick="filtrar('todos')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--cor-principal); background: var(--cor-principal); color: white; cursor: pointer;">Todos</button>
-                <button class="btn-filtro" onclick="filtrar('vulcao')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--cor-principal); background: transparent; color: var(--cor-principal); cursor: pointer;">Bolos Vulcão</button>
-                <button class="btn-filtro" onclick="filtrar('festa')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--cor-principal); background: transparent; color: var(--cor-principal); cursor: pointer;">Bolos de Festa</button>
+    <a href="#bloco-vulcao" class="btn-ancora">Bolos Vulcão</a>
+    <a href="#bloco-festa" class="btn-ancora">Bolos de Festa</a>
+    <a href="#bloco-casamento" class="btn-ancora">Casamentos</a>
             </div>
             
-            <div class="categoria-bloco">
+            <div class="categoria-bloco" id="bloco-vulcao">
                 <h3 class="categoria-titulo">Bolos Vulcão</h3>
                 <div id="categoria-vulcao" class="grid-produtos">
                     
                     <div class="card-produto">
                         <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"  alt="Bolo Vulcão de Chocolate" style="cursor: pointer;" onclick="abrirModal(this.src)">
-                        <div class="card-produto-info">
+                        <div class="card-produto-info" >
                             <h3>Vulcão de Chocolate</h3>
                             <p>Massa super fofinha com cobertura generosa de brigadeiro belga.</p>
                             <span class="preco">R$ 65,00</span>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="categoria-bloco">
+            <div class="categoria-bloco" id="bloco-festa">
                 <h3 class="categoria-titulo">Bolos de Festa</h3>
                 <div id="categoria-festa" class="grid-produtos">
                     
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="categoria-bloco">
+            <div class="categoria-bloco" id="bloco-casamento">
                 <h3 class="categoria-titulo">Casamentos & Celebrações</h3>
                 <div class="grid-produtos">
                     
